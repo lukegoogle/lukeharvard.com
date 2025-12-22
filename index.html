@@ -3,119 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luke. Allen & Company</title>
+    <title>Luke - Prospectus</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            padding: 40px;
             background-color: #ffffff;
             color: #000;
+            line-height: 1.4;
         }
         .container {
-            display: flex;
-            max-width: 1000px;
-            width: 100%;
-            padding: 40px;
-            gap: 50px;
-            align-items: flex-start;
-        }
-        .profile-pic {
-            flex: 0 0 320px;
-        }
-        .profile-pic img {
-            width: 100%;
-            display: block;
-        }
-        .content {
-            flex: 1;
-        }
-        .header-logos {
-            display: flex;
-            gap: 60px;
-            margin-bottom: 30px;
-        }
-        .logo-group {
-            text-align: center;
-        }
-        .logo-group img {
-            height: 65px;
-            display: block;
-            margin: 0 auto 10px;
-        }
-        h1 {
-            font-size: 38px;
-            margin: 0 0 20px 0;
-            font-weight: normal;
-        }
-        .description {
-            font-size: 19px;
-            line-height: 1.4;
-            margin-bottom: 20px;
-        }
-        .contact-links {
-            font-size: 19px;
-            margin-bottom: 40px;
-        }
-        .corporate-section {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             gap: 40px;
-            font-size: 19px;
-            margin-bottom: 10px;
         }
-        a {
-            color: #000;
+        .sidebar {
+            flex: 0 0 320px;
+        }
+        .sidebar img {
+            width: 100%;
+            height: auto;
+        }
+        .main-content {
+            flex: 1;
+        }
+        /* Logo Grid Styling */
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+            text-align: center;
+            align-items: end;
+        }
+        .logo-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .logo-item img {
+            max-height: 55px; /* Standard height for most logos */
+            max-width: 100%;
+            margin-bottom: 12px;
+        }
+        
+        /* Specific override for a larger TensorFlow logo */
+        .logo-item .logo-tensorflow {
+            max-height: 90px; 
+            margin-bottom: 8px;
+        }
+
+        .link-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .logo-link {
+            font-size: 15px;
             text-decoration: underline;
+            color: #000;
         }
-        .risk-disclaimer {
+        /* Prospectus Styling */
+        .header-meta {
+            margin-bottom: 25px;
+        }
+        .header-meta h2 {
+            font-size: 20px;
+            margin: 0;
             font-weight: bold;
-            font-size: 19px;
         }
+        .title-name {
+            font-size: 42px;
+            font-weight: bold;
+            margin: 30px 0 10px 0;
+            text-align: center;
+        }
+        .prospectus-label {
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-header {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .risk-section {
+            margin-top: 40px;
+            border-top: 1px solid #000;
+            padding-top: 15px;
+        }
+        a { color: #000; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="profile-pic">
-        <img src="Luke Clark.png" alt="Luke Profile">
+    <div class="sidebar">
+        <img src="Luke Clark.png" alt="Luke Portrait">
     </div>
-    
-    <div class="content">
-        <div class="header-logos">
-            <div class="logo-group">
+
+    <div class="main-content">
+        <div class="logo-grid">
+            <div class="logo-item">
+                <img src="SEC.png" alt="SEC">
+                <a href="http://lukesec.com" class="logo-link">lukesec.com</a>
+            </div>
+            <div class="logo-item">
                 <img src="NASDAQ.png" alt="Nasdaq">
-                <a href="http://lukenasdaq.com">lukenasdaq.com</a>
+                <a href="http://lukenasdaq.com" class="logo-link">lukenasdaq.com</a>
             </div>
-            <div class="logo-group">
+            <div class="logo-item">
                 <img src="Harvard.png" alt="Harvard">
-                <a href="http://lukeharvard.com">lukeharvard.com</a>
+                <div class="link-group">
+                    <a href="http://lukeharvard.com" class="logo-link">lukeharvard.com</a>
+                    <a href="http://lukemba.com" class="logo-link">lukemba.com</a>
+                </div>
+            </div>
+            <div class="logo-item">
+                <img src="PayPal.png" alt="PayPal">
+                <a href="http://lukepaypal.com" class="logo-link">lukepaypal.com</a>
+            </div>
+            
+            <div class="logo-item" style="grid-column: 3;">
+                <img src="TensorFlow.png" alt="TensorFlow" class="logo-tensorflow">
+                <a href="http://luketensorflow.com" class="logo-link">luketensorflow.com</a>
+            </div>
+            
+            <div class="logo-item">
+                <img src="Google.png" alt="Google">
+                <div class="link-group">
+                    <a href="http://lukegoogle.com" class="logo-link">lukegoogle.com</a>
+                    <a href="http://lukekeras.com" class="logo-link">lukekeras.com</a>
+                    <a href="http://lukepython.com" class="logo-link">lukepython.com</a>
+                    <a href="http://lukeml.com" class="logo-link">lukeml.com</a>
+                </div>
+            </div>
+            <div class="logo-item">
+                <img src="Deloitte.png" alt="Deloitte">
+                <a href="http://lukedeloitte.com" class="logo-link">lukedeloitte.com</a>
             </div>
         </div>
 
-        <h1>Luke</h1>
-
-        <div class="description">
-            I scored 52% on FINRA Security Industry Essentials (SIE)<br>
-            with Prometric on Nov 24, 2025. With Prometric I will take<br>
-            GMAT in December, 2025.
+        <div class="header-meta">
+            <h2>U.S. Securities and Exchange Commission</h2>
+            <p>Washington <a href="http://lukesec.com">lukesec.com</a></p>
+            <p>Prospectus <br> December 22, 2025</p>
         </div>
 
-        <div class="contact-links">
-            Vitae at <a href="http://lukeharvard.com">lukeharvard.com</a> &nbsp;&nbsp; 
-            Email me <a href="mailto:luke@lukefreshfields.com">luke@lukefreshfields.com</a>.
+        <h1 class="title-name">Luke</h1>
+        <div class="prospectus-label">PROSPECTUS</div>
+
+        <div class="section-header">Allen & Company LLC</div>
+        <a href="http://lukeallenco.com">lukeallenco.com</a>
+
+        <div class="section-header">Management</div>
+        <p>As of December 22, 2025 Luke's age is 28.</p>
+        <p>
+            <em>Luke</em> scored 52% on FINRA Security Industry Essentials (SIE) with Prometric on Nov 24, 2025. 
+            Luke will take GMAT with Prometric in December, 2025.
+        </p>
+
+        <p>
+            Vitae <a href="http://lukeharvard.com">lukeharvard.com</a> &nbsp;&nbsp; 
+            Email Luke <a href="mailto:luke@lukefreshfields.com">luke@lukefreshfields.com</a>
+        </p>
+
+        <div class="risk-section">
+            <strong>Risk Factors</strong><br>
+            <strong>All investments involve risk, including the possible loss of principal.</strong>
         </div>
 
-        <div class="corporate-section">
-            <span>Allen & Company</span>
-            <a href="http://lukeallenco.com">lukeallenco.com</a>
-        </div>
-
-        <div class="risk-disclaimer">
-            All investments involve risk, including the possible loss of principal.
-        </div>
+        <p style="margin-top: 20px; font-size: 14px;">
+            You should rely only on the information contained in this prospectus.
+        </p>
     </div>
 </div>
 

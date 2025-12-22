@@ -45,12 +45,12 @@
             justify-content: flex-end;
         }
         .logo-item img {
-            max-height: 55px; /* Standard height for most logos */
+            max-height: 55px;
             max-width: 100%;
             margin-bottom: 12px;
         }
         
-        /* Specific override for a larger TensorFlow logo */
+        /* Larger TensorFlow Branding */
         .logo-item .logo-tensorflow {
             max-height: 90px; 
             margin-bottom: 8px;
@@ -69,33 +69,41 @@
         /* Prospectus Styling */
         .header-meta {
             margin-bottom: 25px;
+            font-size: 18px;
         }
         .header-meta h2 {
-            font-size: 20px;
+            font-size: 22px;
             margin: 0;
             font-weight: bold;
         }
         .title-name {
-            font-size: 42px;
+            font-size: 48px;
             font-weight: bold;
             margin: 30px 0 10px 0;
             text-align: center;
         }
         .prospectus-label {
             font-weight: bold;
-            font-size: 18px;
+            font-size: 22px;
             text-align: center;
             margin-bottom: 40px;
         }
         .section-header {
             font-weight: bold;
-            font-size: 18px;
-            margin-top: 20px;
+            font-size: 19px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        .body-text {
+            font-size: 17px;
+            margin-bottom: 15px;
         }
         .risk-section {
             margin-top: 40px;
-            border-top: 1px solid #000;
-            padding-top: 15px;
+            padding-top: 10px;
+        }
+        .italic-name {
+            font-style: italic;
         }
         a { color: #000; }
     </style>
@@ -140,6 +148,7 @@
                     <a href="http://lukegoogle.com" class="logo-link">lukegoogle.com</a>
                     <a href="http://lukekeras.com" class="logo-link">lukekeras.com</a>
                     <a href="http://lukepython.com" class="logo-link">lukepython.com</a>
+                    <a href="http://luketensorflow.com" class="logo-link">luketensorflow.com</a>
                     <a href="http://lukeml.com" class="logo-link">lukeml.com</a>
                 </div>
             </div>
@@ -159,28 +168,33 @@
         <div class="prospectus-label">PROSPECTUS</div>
 
         <div class="section-header">Allen & Company LLC</div>
-        <a href="http://lukeallenco.com">lukeallenco.com</a>
+        <a href="http://lukeallenco.com" class="body-text">lukeallenco.com</a>
+
+        <p class="body-text" style="margin-top: 40px;">
+            You should rely only on the information contained in this prospectus.
+        </p>
+
+        <p class="body-text">
+            You should be aware that we have selected an underwriting group that serves a broad range of the investing public, and each member of the underwriting group makes different methods of allocation available to its customers.
+        </p>
 
         <div class="section-header">Management</div>
-        <p>As of December 22, 2025 Luke's age is 28.</p>
-        <p>
-            <em>Luke</em> scored 52% on FINRA Security Industry Essentials (SIE) with Prometric on Nov 24, 2025. 
+        <p class="body-text">As of December 22, 2025 Luke's age is 28.</p>
+
+        <p class="body-text">
+            <span class="italic-name">Luke</span> scored 52% on FINRA Security Industry Essentials (SIE) with Prometric on Nov 24, 2025. 
             Luke will take GMAT with Prometric in December, 2025.
         </p>
 
-        <p>
-            Vitae <a href="http://lukeharvard.com">lukeharvard.com</a> &nbsp;&nbsp; 
+        <p class="body-text">
+            Vitae at <a href="http://lukeharvard.com">lukeharvard.com</a> &nbsp;&nbsp; 
             Email Luke <a href="mailto:luke@lukefreshfields.com">luke@lukefreshfields.com</a>
         </p>
 
         <div class="risk-section">
-            <strong>Risk Factors</strong><br>
-            <strong>All investments involve risk, including the possible loss of principal.</strong>
+            <p class="body-text"><strong>Risk Factors</strong></p>
+            <p class="body-text"><strong>All investments involve risk, including the possible loss of principal.</strong></p>
         </div>
-
-        <p style="margin-top: 20px; font-size: 14px;">
-            You should rely only on the information contained in this prospectus.
-        </p>
     </div>
 </div>
 

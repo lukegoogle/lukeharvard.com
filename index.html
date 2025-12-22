@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luke - Professional Profile</title>
+    <title>Luke. Allen & Company</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,54 +17,62 @@
         }
         .container {
             display: flex;
-            max-width: 900px;
+            max-width: 1000px;
             width: 100%;
             padding: 40px;
-            gap: 40px;
+            gap: 50px;
+            align-items: flex-start;
         }
         .profile-pic {
-            flex: 1;
-            max-width: 300px;
+            flex: 0 0 320px;
         }
         .profile-pic img {
             width: 100%;
             display: block;
         }
         .content {
-            flex: 2;
+            flex: 1;
         }
         .header-logos {
             display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin-bottom: 20px;
+            gap: 60px;
+            margin-bottom: 30px;
         }
-        .header-logos div {
+        .logo-group {
             text-align: center;
         }
-        .header-logos img {
-            height: 60px;
+        .logo-group img {
+            height: 65px;
             display: block;
             margin: 0 auto 10px;
         }
         h1 {
-            font-size: 36px;
+            font-size: 38px;
             margin: 0 0 20px 0;
             font-weight: normal;
         }
-        p {
-            font-size: 18px;
-            line-height: 1.5;
+        .description {
+            font-size: 19px;
+            line-height: 1.4;
             margin-bottom: 20px;
+        }
+        .contact-links {
+            font-size: 19px;
+            margin-bottom: 40px;
+        }
+        .corporate-section {
+            display: flex;
+            gap: 40px;
+            font-size: 19px;
+            margin-bottom: 10px;
         }
         a {
             color: #000;
             text-decoration: underline;
         }
-        .disclaimer {
-            margin-top: 40px;
+        .risk-disclaimer {
             font-weight: bold;
-            font-size: 18px;
+            font-size: 19px;
         }
     </style>
 </head>
@@ -72,33 +80,40 @@
 
 <div class="container">
     <div class="profile-pic">
-        <img src="Luke Clark.png" alt="Luke Profile Photo">
+        <img src="Luke Clark.png" alt="Luke Profile">
     </div>
     
     <div class="content">
         <div class="header-logos">
-            <div>
-                <img src="Harvard.png" alt="Harvard Logo">
-                <a href="http://lukeharvard.com">lukeharvard.com</a>
-            </div>
-            <div>
-                <img src="NASDAQ.png" alt="Nasdaq Logo">
+            <div class="logo-group">
+                <img src="NASDAQ.png" alt="Nasdaq">
                 <a href="http://lukenasdaq.com">lukenasdaq.com</a>
+            </div>
+            <div class="logo-group">
+                <img src="Harvard.png" alt="Harvard">
+                <a href="http://lukeharvard.com">lukeharvard.com</a>
             </div>
         </div>
 
         <h1>Luke</h1>
 
-        <p>I scored 52% on FINRA Security Industry Essentials (SIE)<br>
-        with Prometric on Nov 24, 2025.</p>
+        <div class="description">
+            I scored 52% on FINRA Security Industry Essentials (SIE)<br>
+            with Prometric on Nov 24, 2025. With Prometric I will take<br>
+            GMAT in December, 2025.
+        </div>
 
-        <p>With Prometric I will take GMAT in December, 2025.</p>
+        <div class="contact-links">
+            Vitae at <a href="http://lukeharvard.com">lukeharvard.com</a> &nbsp;&nbsp; 
+            Email me <a href="mailto:luke@lukefreshfields.com">luke@lukefreshfields.com</a>.
+        </div>
 
-        <p>Vitae at <a href="http://lukeharvard.com">lukeharvard.com</a></p>
+        <div class="corporate-section">
+            <span>Allen & Company</span>
+            <a href="http://lukeallenco.com">lukeallenco.com</a>
+        </div>
 
-        <p>Email me <a href="mailto:luke@lukefreshfields.com">luke@lukefreshfields.com</a>.</p>
-
-        <div class="disclaimer">
+        <div class="risk-disclaimer">
             All investments involve risk, including the possible loss of principal.
         </div>
     </div>

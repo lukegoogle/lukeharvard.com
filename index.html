@@ -3,200 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luke - Prospectus</title>
+    <title>Luke - Personal Profile</title>
     <style>
+        /* * Base styles to match the deep red background and typography.
+         */
         body {
-            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
-            padding: 40px;
-            background-color: #ffffff;
-            color: #000;
-            line-height: 1.4;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            gap: 40px;
-        }
-        .sidebar {
-            flex: 0 0 320px;
-        }
-        .sidebar img {
-            width: 100%;
-            height: auto;
-        }
-        .main-content {
-            flex: 1;
-        }
-        /* Logo Grid Styling */
-        .logo-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-bottom: 50px;
-            text-align: center;
-            align-items: end;
-        }
-        .logo-item {
+            padding: 0;
+            background-color: #A51C30; /* Harvard Crimson style */
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: flex-end;
-        }
-        .logo-item img {
-            max-height: 55px;
-            max-width: 100%;
-            margin-bottom: 12px;
-        }
-        
-        /* Larger TensorFlow Branding */
-        .logo-item .logo-tensorflow {
-            max-height: 90px; 
-            margin-bottom: 8px;
+            min-height: 100vh;
         }
 
-        .link-group {
+        /* Header section with logo and link */
+        header {
+            padding: 20px 40px;
             display: flex;
-            flex-direction: column;
-            gap: 2px;
+            align-items: center;
+            gap: 15px;
         }
-        .logo-link {
-            font-size: 15px;
+
+        .logo {
+            width: 40px;
+            height: auto;
+        }
+
+        header a {
+            color: white;
             text-decoration: underline;
-            color: #000;
+            font-size: 1.2rem;
         }
-        /* Prospectus Styling */
-        .header-meta {
-            margin-bottom: 25px;
-            font-size: 18px;
+
+        /* Main profile content */
+        main {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .header-meta h2 {
-            font-size: 22px;
-            margin: 0;
-            font-weight: bold;
+
+        .profile-photo {
+            max-width: 300px;
+            border-radius: 8px;
         }
-        .title-name {
-            font-size: 48px;
-            font-weight: bold;
-            margin: 30px 0 10px 0;
-            text-align: center;
+
+        .content-text {
+            max-width: 500px;
         }
-        .prospectus-label {
-            font-weight: bold;
-            font-size: 22px;
-            text-align: center;
+
+        .content-text h1 {
+            font-size: 3rem;
             margin-bottom: 40px;
+            font-weight: 400;
         }
-        .section-header {
-            font-weight: bold;
-            font-size: 19px;
-            margin-top: 30px;
-            margin-bottom: 10px;
+
+        .content-text p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 10px 0;
         }
-        .body-text {
-            font-size: 17px;
-            margin-bottom: 15px;
+
+        /* Footer links */
+        footer {
+            padding: 20px 40px;
+            text-align: right;
         }
-        .risk-section {
-            margin-top: 40px;
-            padding-top: 10px;
+
+        footer p {
+            margin: 5px 0;
+            font-size: 1.1rem;
         }
-        .italic-name {
-            font-style: italic;
+
+        footer a {
+            color: white;
+            text-decoration: underline;
         }
-        a { color: #000; }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+                text-align: center;
+            }
+            footer {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="sidebar">
-        <img src="Luke Clark.png" alt="Luke Portrait">
-    </div>
+    <header>
+        <img src="Harvard.png" alt="Logo" class="logo">
+        <a href="https://lukeharvard.com">lukeharvard.com</a>
+    </header>
 
-    <div class="main-content">
-        <div class="logo-grid">
-            <div class="logo-item">
-                <img src="SEC.png" alt="SEC">
-                <a href="http://lukesec.com" class="logo-link">lukesec.com</a>
-            </div>
-            <div class="logo-item">
-                <img src="NASDAQ.png" alt="Nasdaq">
-                <a href="http://lukenasdaq.com" class="logo-link">lukenasdaq.com</a>
-            </div>
-            <div class="logo-item">
-                <img src="Harvard.png" alt="Harvard">
-                <div class="link-group">
-                    <a href="http://lukeharvard.com" class="logo-link">lukeharvard.com</a>
-                    <a href="http://lukemba.com" class="logo-link">lukemba.com</a>
-                </div>
-            </div>
-            <div class="logo-item">
-                <img src="PayPal.png" alt="PayPal">
-                <a href="http://lukepaypal.com" class="logo-link">lukepaypal.com</a>
-            </div>
-            
-            <div class="logo-item" style="grid-column: 3;">
-                <img src="TensorFlow.png" alt="TensorFlow" class="logo-tensorflow">
-                <a href="http://luketensorflow.com" class="logo-link">luketensorflow.com</a>
-            </div>
-            
-            <div class="logo-item">
-                <img src="Google.png" alt="Google">
-                <div class="link-group">
-                    <a href="http://lukegoogle.com" class="logo-link">lukegoogle.com</a>
-                    <a href="http://lukekeras.com" class="logo-link">lukekeras.com</a>
-                    <a href="http://lukepython.com" class="logo-link">lukepython.com</a>
-                    <a href="http://luketensorflow.com" class="logo-link">luketensorflow.com</a>
-                    <a href="http://lukeml.com" class="logo-link">lukeml.com</a>
-                </div>
-            </div>
-            <div class="logo-item">
-                <img src="Deloitte.png" alt="Deloitte">
-                <a href="http://lukedeloitte.com" class="logo-link">lukedeloitte.com</a>
-            </div>
+    <main>
+        <img src="Luke Clark.png" alt="Luke" class="profile-photo">
+
+        <div class="content-text">
+            <h1>Luke</h1>
+            <p>I scored 52% on FINRA SIE Prometric on Nov 24, 2025.</p>
+            <p>I will take GMAT Prometric in Dec, 2025.</p>
         </div>
+    </main>
 
-        <div class="header-meta">
-            <h2>U.S. Securities and Exchange Commission</h2>
-            <p>Washington <a href="http://lukesec.com">lukesec.com</a></p>
-            <p>Prospectus <br> December 22, 2025</p>
-        </div>
-
-        <h1 class="title-name">Luke</h1>
-        <div class="prospectus-label">PROSPECTUS</div>
-
-        <div class="section-header">Allen & Company LLC</div>
-        <a href="http://lukeallenco.com" class="body-text">lukeallenco.com</a>
-
-        <p class="body-text" style="margin-top: 40px;">
-            You should rely only on the information contained in this prospectus.
-        </p>
-
-        <p class="body-text">
-            You should be aware that we have selected an underwriting group that serves a broad range of the investing public, and each member of the underwriting group makes different methods of allocation available to its customers.
-        </p>
-
-        <div class="section-header">Management</div>
-        <p class="body-text">As of December 22, 2025 Luke's age is 28.</p>
-
-        <p class="body-text">
-            <span class="italic-name">Luke</span> scored 52% on FINRA Security Industry Essentials (SIE) with Prometric on Nov 24, 2025. 
-            Luke will take GMAT with Prometric in December, 2025.
-        </p>
-
-        <p class="body-text">
-            Vitae at <a href="http://lukeharvard.com">lukeharvard.com</a> &nbsp;&nbsp; 
-            Email Luke <a href="mailto:luke@lukefreshfields.com">luke@lukefreshfields.com</a>
-        </p>
-
-        <div class="risk-section">
-            <p class="body-text"><strong>Risk Factors</strong></p>
-            <p class="body-text"><strong>All investments involve risk, including the possible loss of principal.</strong></p>
-        </div>
-    </div>
-</div>
+    <footer>
+        <p>Email <a href="mailto:luke@lukeharvard.com">luke@lukeharvard.com</a></p>
+        <p>Vitae <a href="https://lukeharvard.com">lukeharvard.com</a></p>
+    </footer>
 
 </body>
 </html>
